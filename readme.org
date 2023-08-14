@@ -11,10 +11,13 @@ Global userstyle that changes base font to your favorite base font.
 
 #+HTML: </div>
 
-** Installation
-You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on the install link below.
+** My Fork
+This is my (binarynoise's) fork where I collect my changes. This will be rebased on upstream so please directly fork/clone vednoc's base repo.
 
-[[https://raw.githubusercontent.com/vednoc/custom-fonts/main/fonts.user.styl][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
+** Installation
+You have to install [[https://github.com/openstyles/stylus/][Stylus]] and then click on the install link below.
+
+[[https://github.com/binarynoise/custom-fonts/raw/refs/heads/binarynoise-patches/fonts.user.styl][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
 
 ** Contributing
 If you have any feature requests, feel free to open an issue.
