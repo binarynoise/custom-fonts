@@ -29,6 +29,7 @@
     '800          ': '800',
     '900          ': '900',
 }
+@var text baseFontFeatures 'Set your font\'s font features' 'null'
 
 @var text mono 'Set your favorite Mono font' 'null'
 @var select monoStyle 'Mono font style' {
@@ -49,6 +50,7 @@
     '800          ': '800',
     '900          ': '900',
 }
+@var text monoFontFeatures 'Set your mono font\'s font features' 'null'
 
 @var checkbox letterSpacing 'Reset letter-spacing to 0px' 0
 
@@ -161,6 +163,7 @@ $composer = join(', ', composer)
         font-family: base       !important if base
         font-style:  baseStyle  !important if baseStyle
         letter-spacing: 0px     !important if letterSpacing
+        font-feature-settings baseFontFeatures if baseFontFeatures
     }
 
     :not({ $bold }) {
@@ -172,6 +175,7 @@ $composer = join(', ', composer)
         font-style:  monoStyle  !important if monoStyle
         font-weight: monoWeight            if monoWeight
         letter-spacing: 0px     !important if letterSpacing
+        font-feature-settings  monoFontFeatures ? monoFontFeatures : unset
     }
 
     { $composer } {
@@ -180,11 +184,13 @@ $composer = join(', ', composer)
             font-style:  monoStyle  !important if monoStyle
             font-weight: monoWeight            if monoWeight
             letter-spacing: 0px     !important if letterSpacing
+            font-feature-settings  monoFontFeatures ? monoFontFeatures : unset
         } else {
             font-family: base       !important if base
             font-style:  baseStyle  !important if baseStyle
             font-weight: baseWeight            if baseWeight
             letter-spacing: 0px     !important if letterSpacing
+            font-feature-settings baseFontFeatures if baseFontFeatures
         }
     }
 }
