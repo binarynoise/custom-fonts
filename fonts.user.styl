@@ -166,7 +166,7 @@ $composer = join(', ', composer)
         font-feature-settings baseFontFeatures if baseFontFeatures
     }
 
-    :not({ $bold }) {
+    :not({ join(', ', $bold, $icons) }) {
         font-weight: baseWeight            if baseWeight
     }
 
